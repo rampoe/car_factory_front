@@ -1,5 +1,29 @@
 @charset "utf-8";
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .hero-section {
+  position: relative;
   background-image: url("../images/car.jpg");
+  z-index: 1;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.61);
+  z-index: 2;
+}
+
+.hero-section__content {
+  position: relative;
+  z-index: 3;
 }
